@@ -20,7 +20,10 @@ namespace PropertyTest
 
             foreach (ITaxable taxable in taxables)
             {
-                Console.WriteLine(taxable.TaxValue());
+                if (taxable is House)
+                {
+                    Console.WriteLine($"Taxable Value{house.TaxValue()}");
+                }
             }
         }
     }
